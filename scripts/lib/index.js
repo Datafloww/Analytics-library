@@ -22,13 +22,13 @@ function analyticsEventPlugin(writeKey) {
         name: "datafloww-plugin",
 
         pageEnd: ({ payload, config }) => {
-            sendData({ payload, config, writeKey });
+            sendTrackedEvents({ payload, config, writeKey });
         },
         trackEnd: ({ payload, config }) => {
-            sendData({ payload, config, writeKey });
+            sendTrackedEvents({ payload, config, writeKey });
         },
         identifyEnd: ({ payload, config }) => {
-            sendData({ payload, config, writeKey });
+            sendTrackedEvents({ payload, config, writeKey });
         },
     };
 }
