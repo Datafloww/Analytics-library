@@ -1,6 +1,6 @@
 {
     "name": "@datafloww/analytics",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A event tracking package by Datafloww, designed to capture user interactions and send events for analytics.",
     "site": "https://datafloww.me",
     "main": "index.js",
