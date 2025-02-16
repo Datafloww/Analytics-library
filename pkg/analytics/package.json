@@ -1,0 +1,42 @@
+{
+    "name": "@datafloww/analytics",
+    "version": "1.0.0",
+    "description": "A event tracking package by Datafloww, designed to capture user interactions and send events for analytics.",
+    "site": "https://datafloww.me",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "release:patch": "npm version patch && npm publish",
+        "release:minor": "npm version minor && npm publish",
+        "release:major": "npm version major && npm publish"
+    },
+    "keywords": [
+        "analytics",
+        "datafloww",
+        "datafloww-analytics",
+        "tracking",
+        "analytics-project",
+        "metrics",
+        "telemetry",
+        "tracking",
+        "event tracking",
+        "page tracking",
+        "user tracking",
+        "custom events",
+        "stats",
+        "statistics",
+        "monitoring",
+        "pageviews"
+    ],
+    "author": "Datafloww Analytics",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "directory": "pkg/analytics",
+        "url": "git+https://github.com/Datafloww/Analytics-library.git"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "analytics": "^0.8.14"
+    }
+}
