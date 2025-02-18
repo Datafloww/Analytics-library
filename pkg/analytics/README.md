@@ -1,4 +1,5 @@
-![npm](https://img.shields.io/npm/dm/@datafloww/analytics?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@datafloww/analytics?style=flat-square) ![GitHub](https://img.shields.io/github/license/datafloww/analytics-library?style=flat-square)
+![NPM Version](https://img.shields.io/npm/v/%40datafloww%2Fanalytics)
+ ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@datafloww/analytics?style=flat-square) ![GitHub](https://img.shields.io/github/license/datafloww/analytics-library?style=flat-square)
 
 ## Installation
 
