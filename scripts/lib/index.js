@@ -1,38 +1,3 @@
-async function sendTrackedEvents(params) {
-    const { payload, config, writeKey } = params;
-    await fetch("http://localhost:3000/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            data: {
-                payload: payload,
-            },
-            write_key: writeKey,
-            config: config,
-        }),
-    }).catch((err) => {
-        console.warn(err);
-    });
-}
-
-function analyticsEventPlugin(writeKey) {
-    return {
-        name: "datafloww-plugin",
-
-        pageEnd: ({ payload, config }) => {
-            sendTrackedEvents({ payload, config, writeKey });
-        },
-        trackEnd: ({ payload, config }) => {
-            sendTrackedEvents({ payload, config, writeKey });
-        },
-        identifyEnd: ({ payload, config }) => {
-            sendTrackedEvents({ payload, config, writeKey });
-        },
-    };
-}
-
 var i = "analytics",
     datafloww = (window[i] = window[i] || []);
 datafloww.load = function (key) {
@@ -57,5 +22,5 @@ datafloww.load = function (key) {
 };
 
 datafloww.SNIPPET_VERSION = "1.0.0";
-datafloww._key = "[your-write-key]";
-datafloww.load("[your-write-key]");
+datafloww._key = "123";
+datafloww.load("123");
