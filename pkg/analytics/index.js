@@ -3,6 +3,8 @@ import { analyticsEventPlugin } from "./events-plugin/plugin.js";
 
 function createAnalyticsInstance() {
     let analytics = null;
+    let initializedKey = null;
+
     return {
         /**
          * Initializes the analytics instance with the provided write key.
@@ -14,10 +16,17 @@ function createAnalyticsInstance() {
         init({ key }) {
             if (!key) throw new Error("Write key is required");
 
+            // If already initialized with the same key, return existing instance
+            if (analytics && initializedKey === key) {
+                return analytics;
+            }
+
             analytics = CoreAnalytics({
                 app: "datafloww",
                 plugins: [analyticsEventPlugin(key)],
             });
+
+            initializedKey = key;
 
             try {
                 this.getInstance();
